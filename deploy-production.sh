@@ -18,7 +18,7 @@ yes | gcloud beta container images add-tag gcr.io/${PROJECT_NAME_PRD}/${DOCKER_I
 kubectl config view
 kubectl config current-context
 
-# kubectl run ${KUBE_DEPLOYMENT_NAME} --image=gcr.io/${PROJECT_NAME_PRD}/${DOCKER_IMAGE_NAME}:$TRAVIS_COMMIT --port=3003
-# kubectl expose deployment ${KUBE_DEPLOYMENT_NAME} --type="LoadBalancer"
+kubectl run ${KUBE_DEPLOYMENT_NAME} --image=gcr.io/${PROJECT_NAME_PRD}/${DOCKER_IMAGE_NAME}:$TRAVIS_COMMIT --port=3003
+kubectl expose deployment ${KUBE_DEPLOYMENT_NAME} --type="LoadBalancer"
 
-kubectl set image deployment/${KUBE_DEPLOYMENT_NAME} ${KUBE_DEPLOYMENT_CONTAINER_NAME}=gcr.io/${PROJECT_NAME_PRD}/${DOCKER_IMAGE_NAME}:$TRAVIS_COMMIT
+# kubectl set image deployment/${KUBE_DEPLOYMENT_NAME} ${KUBE_DEPLOYMENT_CONTAINER_NAME}=gcr.io/${PROJECT_NAME_PRD}/${DOCKER_IMAGE_NAME}:$TRAVIS_COMMIT
