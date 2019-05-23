@@ -145,7 +145,12 @@ exports.deleteCart = async (req, reply) => {
     try {
         const id = req.params.id;
         const cart = await Cart.findByIdAndRemove(id);
-        return cart;
+        if(cart){
+            return cart;
+        }
+
+        throw boom.boomify(new Error("Cart was not found."));
+
     } catch (err) {
         throw boom.boomify(err);
     }
