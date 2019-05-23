@@ -11,7 +11,7 @@ const fastify = require('fastify')({
 if(process.env.MONGO_PASS==undefined){
     throw Error("MongoDB password not set");
 }else {
-    const db = 'mongodb+srv://admin:'+ (process.env.MONGO_PASS).trim() + '@cart-k7dk7.gcp.mongodb.net/test?retryWrites=true';
+    const db = 'mongodb+srv://admin:' + (process.env.MONGO_PASS).trim() + '@cart-k7dk7.gcp.mongodb.net/test?retryWrites=true';
     const local_db = 'mongodb://localhost/cart';
 
 // Connect to DB
@@ -44,7 +44,6 @@ if(process.env.MONGO_PASS==undefined){
                 };
                 start();
             }
-
-
         )
         .catch(err => console.log(err));
+}
