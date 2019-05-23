@@ -21,7 +21,8 @@ const cartSchema = new mongoose.Schema({
         expires: 3600
     },
 }, {
-    versionKey: false
+    versionKey: false,
+    usePushEach:true
 });
 
 module.exports = mongoose.model('Cart', cartSchema);

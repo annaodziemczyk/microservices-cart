@@ -14,6 +14,11 @@ const routes = [
     },
     {
         method: 'PUT',
+        url: '/api/cart/:id/combine/:customerId',
+        handler: cartController.combineCustomerCarts
+    },
+    {
+        method: 'PUT',
         url: '/api/cart/:id/addItem',
         handler: cartController.addItem
     },
