@@ -20,7 +20,7 @@ const productSchema = new mongoose.Schema({
 });
 
 const cartSchema = new mongoose.Schema({
-    customerId: {
+    userId: {
         type: String,
         required: false
     },

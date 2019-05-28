@@ -8,13 +8,18 @@ const routes = [
         handler: cartController.getCart
     },
     {
+        method: 'GET',
+        url: '/api/cart/user/:id',
+        handler: cartController.getUserCart
+    },
+    {
         method: 'POST',
         url: '/api/cart',
         handler: cartController.createCart
     },
     {
-        method: 'PUT',
-        url: '/api/cart/:id/combine/:customerId',
+        method: 'GET',
+        url: '/api/cart/:id/combine/:userId',
         handler: cartController.combineCustomerCarts
     },
     {
@@ -36,16 +41,3 @@ const routes = [
 ];
 
 module.exports = routes;
-
-// ,
-// {
-//     method: 'PUT',
-//         url: '/api/cart/:id',
-//     handler: cartController.updateCart
-// }
-//
-// {
-//     method: 'GET',
-//         url: '/api/cart/:id',
-//     handler: cartController.getCart
-// },
