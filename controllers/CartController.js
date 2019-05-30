@@ -3,6 +3,7 @@ const Joi = require('joi');
 // Get Data Models
 const Cart = require('../models/Cart');
 var _ = require('lodash');
+var MqttController = require("./MqttController");
 
 
 const productSchema = Joi.object({
@@ -100,11 +101,15 @@ exports.addItem = async (req, reply) => {
                 { $push: { itemsInCart: product } },
                 {new:true}).exec();
         }
+        //MqttController.publishMessage("CART_ITEM_ADDED", product.catalogueId);
+        console.log("Adding cart item");
         //if cart is no longer there create one
         if(!cart){
+
             req.body = {"itemsInCart":[req.body]};
            return this.createCart(req, reply);
         }
+
         return cart;
     } catch (err) {
         throw boom.boomify(err);

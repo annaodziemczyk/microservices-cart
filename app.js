@@ -16,7 +16,7 @@ if(process.env.MONGO_PASS==undefined){
 
 
 // Connect to DB
-    mongoose.connect(db)
+    mongoose.connect(local_db)
         .then(() => {
                 console.log('MongoDB connected…');
                 // Run the server!

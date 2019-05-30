@@ -14,4 +14,5 @@ exports.connect = ()=>{
 
 exports.publishMessage = (topic, message)=>{
   client.publish(topic, message);
+  return 0;
 };
