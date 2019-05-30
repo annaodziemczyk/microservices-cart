@@ -72,7 +72,7 @@ exports.createCart = async (req, reply) => {
 };
 
 exports.combineCartItems = (existingCart, tempCart)=> {
-    var itemsGroupedById = _.groupBy(_.concat(existingCart.itemsInCart, tempCart.itemsInCart),"userId");
+    var itemsGroupedById = _.groupBy(_.concat(existingCart.itemsInCart, tempCart.itemsInCart),"catalogueId");
     var cartItems = [];
     _.forEach(_.values(itemsGroupedById), (group)=>{
         var qty = _.sumBy(group, 'quantity');

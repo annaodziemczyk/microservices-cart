@@ -14,6 +14,7 @@ if(process.env.MONGO_PASS==undefined){
     const db = 'mongodb+srv://admin:' + (process.env.MONGO_PASS).trim() + '@cart-k7dk7.gcp.mongodb.net/test?retryWrites=true';
     const local_db = 'mongodb://localhost/cart';
 
+
 // Connect to DB
     mongoose.connect(db)
         .then(() => {
