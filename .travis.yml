@@ -6,9 +6,9 @@ services:
 env:
   global:
     - GOOGLE_APPLICATION_CREDENTIALS=~/gcloud-service-key.json
-    - PROJECT_NAME_PRD=microservices-shop
+    - PROJECT_NAME_PRD=cit-shop-microservice
     - CLUSTER_NAME_PRD=cart
-    - CLOUDSDK_COMPUTE_ZONE=us-central1-a
+    - CLOUDSDK_COMPUTE_ZONE=europe-north1-a
     - DOCKER_IMAGE_NAME=cart-node
     - KUBE_DEPLOYMENT_NAME=cart-node
     - KUBE_DEPLOYMENT_CONTAINER_NAME=cart-node
