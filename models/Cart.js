@@ -21,11 +21,7 @@ const productSchema = new mongoose.Schema({
 
 const cartSchema = new mongoose.Schema({
     userId: {
-        type: String,
-        trim: true,
-        index: true,
-        unique: true,
-        sparse: true
+        type: String
     },
     itemsInCart: [
         productSchema
