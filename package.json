@@ -11,7 +11,7 @@
     "fastify-swagger": "^2.4.0",
     "joi": "^14.3.1",
     "lodash": "^4.17.11",
-    "mongoose": "^5.5.11",
+    "mongoose": "^5.7.5",
     "mqtt": "^3.0.0",
     "nodemon": "^1.19.0",
     "swagger": "^0.7.5"
