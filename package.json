@@ -10,7 +10,7 @@
     "fastify": "^2.4.1",
     "fastify-swagger": "^2.4.0",
     "joi": "^14.3.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "mongoose": "^5.5.11",
     "mqtt": "^3.0.0",
     "nodemon": "^1.19.0",
